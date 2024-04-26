@@ -1,0 +1,73 @@
+1. 基于单链表写出删除单链表尾元素的算法(将表尾元素保存到e中)
+// 核心:指针P指向倒数第二个元素      P->next->next==NULL //P指向了倒数第二个
+Status DeleteRear_L(LinkLIst &L,ElemType &e){
+    P=L;
+    if(L->next==NULL) return ERROR;     //如果是空表,返回错误
+    while(p->next!=NULL) p=p->next;     // P连续指向下一个结点
+    q=p->next;
+    e=q->next;
+    free(q);
+    return OK;
+}
+
+2. 基于顺序表,写出求顺序表元素最大值的算法 (将最大值保存到e中)
+void GetMax_Sq(SqList &L,ElemType &e){
+    max=L.elem[0];
+    for(i=0;i<L.length;i++)
+        if(L.elem[i]>max) max=L.elem[i];
+        e=max;
+    }
+
+3. 已知L是带头结点的单链表,写算法求该单链表的长度 (求元素的个数)
+int ListLength_L(LinList l){
+    P=P->next;          //P开始的头结点为空
+    i=0;
+    while(p!=NULL)
+    {
+        P=P->next;
+        i++;
+    }
+    return i;
+    }
+
+4. 已知L是带头结点的单链表,写出删除等于给定值的第一个元素的算法。
+Status Delete_L(LinkList &L,ElemType e){
+    P=L;
+    if(p->next==NULL) return ERROR;
+    while(p->next!=NULL)
+    {
+        if((p->next)->data==e) break;
+        p=p->next;
+    }
+    if(p->next==NULL) return ERROR;     //没有找到元素
+    q=p->next;
+    p->next=q->next;
+    free(q);
+    return OK;
+  }
+
+5. 已知L是带头结点的单链表,写出交换第i和第i+1元素的算法。
+Status Swap_L(LinkList &L,int i){
+    j=0;
+    if(i<1 || i>L.length(L)) return ERROR;
+    while(p!=NULL && j<i-1)
+    {
+           p=p->next;
+           j++;
+    }
+    m=p->next;
+    n=m->next;
+    q=m->next;
+
+    p-<next=n;
+    n->next=m;
+    m->next=q;
+    return OK;
+   }
+
+
+
+
+
+
+

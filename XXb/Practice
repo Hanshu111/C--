@@ -1,0 +1,20 @@
+//归并
+for(i=0,j=0,k=0;i<La.length && j<Lb.length;k++)
+{
+    if(La.elem[i]<Lb.elem[j]){
+        Lc.elem[k]=La.elem[i];
+        i++;
+    }
+    else{
+        Lc.elem[k]=Lb.elem[j];
+            j++;
+    }
+    while(i<La.length){
+        Lc.elem[k]=La.elem[i];
+        i++;    k++;
+        }
+    while(i<Lb.length){
+        Lc.elem[k]=Lb.elem[j];
+        k++;    j++;
+        }
+}
